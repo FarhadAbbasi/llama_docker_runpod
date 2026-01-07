@@ -6,5 +6,4 @@
 
 runpod==1.7.5
 vllm==0.6.3
-torch==2.4.1
 sentencepiece==0.2.0
