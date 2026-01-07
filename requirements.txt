@@ -1,5 +1,10 @@
-runpod==1.7.5
+# runpod==1.7.5
 # torch==2.4.1
 # transformers==4.44.2
 # accelerate==0.34.2
 # sentencepiece==0.2.0
+
+runpod==1.7.5
+vllm==0.6.3
+torch==2.4.1
+sentencepiece==0.2.0
