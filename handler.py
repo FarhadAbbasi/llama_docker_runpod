@@ -1,8 +1,9 @@
 from __future__ import annotations
-
 from typing import Any, Dict
-
+import json
 import runpod
+
+
 # from inference import generate_response
 
 def handler(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -25,6 +26,10 @@ def handler(job: Dict[str, Any]) -> Dict[str, Any]:
 
     # text = generate_response(messages=messages, max_tokens=max_tokens, temperature=temperature)
     # return {"raw_text": text}
-    return {"raw_text": " Received:" + messages }
+    # return {"raw_text": " Received:" + messages }
+    
+    return {
+      "raw_text": "Received messages:\n" + json.dumps(messages, indent=2)
+    }
 
 runpod.serverless.start({"handler": handler})
