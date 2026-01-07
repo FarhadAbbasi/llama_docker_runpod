@@ -28,8 +28,6 @@ def handler(job: Dict[str, Any]) -> Dict[str, Any]:
     # return {"raw_text": text}
     # return {"raw_text": " Received:" + messages }
     
-    return {
-      "raw_text": "Received messages:\n" + json.dumps(messages, indent=2)
-    }
+    return {"raw_text": "Received messages:\n" + json.dumps(messages, indent=2) }
 
 runpod.serverless.start({"handler": handler})
